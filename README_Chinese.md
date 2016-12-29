@@ -4,19 +4,17 @@
 ![](https://github.com/luotuocao2008/ImageCache/blob/master/barechart.png)
 
 #Dependencies
-Download [http://echarts.baidu.com/dist/echarts.common.min.js](http://echarts.baidu.com/dist/echarts.common.min.js) and copy it into assets/javascripts.
+下载[http://echarts.baidu.com/dist/echarts.common.min.js](http://echarts.baidu.com/dist/echarts.common.min.js) 拷贝到dashing项目的assets/javascripts目录。
 
 #Usage
-Create the directory widgets/bar_echart and copy this widget's files into that folder.</br>
-Add the following code on the desired dashboard:
-
-```html
+在dashing项目widgets下创建bar_echart目录，将widgets的文件拷贝bar_echart目录。在dashboard中添加如下代码</br>
+ ```html
  <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="barechart" data-view="BarEchart" data-title="EChart test" data-moreinfo="" ></div>
     </li>
 ```
     
-Create your bar echart job barechart_job.rb ：</br>
+创建barechart的job，barechart.rb 代码如下：</br>
 
 ```coffeescript
 SCHEDULER.every '10s', :first_in => 0 do |job|
